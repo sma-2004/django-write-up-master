@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'CSS/signup.css' %}">
+<script>
+    function test() {
+        npass = document.getElementById('id_New_password').value;
+        cpass = document.getElementById('id_Confirm_password').value;
+        if (npass == cpass) {
+            return true;
+        }
+        else {
+            npass = document.getElementById('id_New_password');
+            cpass = document.getElementById('id_Confirm_password');
+            npass.style.borderColor = "red";
+            cpass.style.borderColor = "red";
+
+            npass.style.outline = "red";
+            cpass.style.outline = "red";
+            alert("Passwords are not same")
+            return false;
+        }
+    }
+</script>
+<style>
+    
+</style>
+<a href="/" id="home"><label id="Home">Home</label></a>
+<a href="/login" id="signIn"><label id="SignIn">Sign In</label></a>
+<form action="{{path}}" method="post" onsubmit="return test()">
+    {% csrf_token %}
+    <div id="back">
+        <div id="coverD"></div>
+        <div id="writeD">
+            <h1 id="write">Write Yourself</h1>
+        </div>
+    </div>
+    <div class="cloud c1">
+        <label class="Text t1">
+            Get ready<br>with your thought
+        </label>
+    </div>
+    <div class="cloud c2">
+        <label class="Text t2">
+            <p>
+                Have something<br> to share.
+                Share it with us. <br>
+                We are ready to listen <br>
+            </p>
+        </label>
+    </div>
+    <div class="cloud c3">
+        <label class="Text t3">
+            Your data is<br>kept private by default here.
+        </label>
+    </div>
+    <div class="cloud c4">
+        <label class="Text t4">
+            Wrote a poem<br>for someone .
+            Post it here.
+        </label>
+    </div>
+    <!-- <div id="imgD">
+        <img id="signup" src="{% static 'SignUpImg.jpg'%}" alt="Unable to load">
+    </div> -->
+    <div id="formContainer">
+        <label id="err">{{err}}</label>
+        <label id="Msg">{{Msg}}</label>
+        {{obj.as_p}}
+        <input id="signUp" type="submit" value="Sign Up">
+    </div>
+</form>
+
+<script>
+    npass = document.getElementById('id_New_password');
+    npass.value = "{{Np}}";
+    cpass = document.getElementById('id_Confirm_password');
+    cpass.value = "{{Cp}}";
+
+    npass.onclick = function (evt) {
+        npass.style.borderColor = "rgb(118, 118, 118)";
+        npass.style.outline = "none";
+    }
+
+    cpass.onclick = function (evt) {
+        cpass.style.borderColor = "rgb(118, 118, 118)";
+        cpass.style.outline = "none";
+    }
+
+    npass.addEventListener("mouseover", function (evt) {
+        npass.style.borderColor = "#1d4448"
+    }, false)
+
+    cpass.addEventListener("mouseover", function (evt) {
+        cpass.style.borderColor = "#1d4448"
+    }, false)
+</script>
+
+{% endblock %}

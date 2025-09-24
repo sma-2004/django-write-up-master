@@ -1,0 +1,123 @@
+{% for d in data %}
+<div id="contH" class="content-holder">
+    <p class="posttxt" id="posttxt ${{d.id}}">
+        {{d.text}}
+    </p>
+    <div class="opts">
+        <div class="beforeopts"></div>
+        {% if visible == "true" %}
+        <label class="switch" id="swit">
+            {% if d.privacy == 1 %}
+            <input type="checkbox" name="privacy" class="privacy" checked value="1">
+            {% else %}
+            <input type="checkbox" name="privacy" class="privacy" value="0">
+            {% endif %}
+            <span class="slider"></span>
+        </label>
+        <button type="button" class="del" id="del${{d.id}}" onclick="del(this)">Delete</button>
+        {% endif %}
+        {% if visible == "false" %}
+        <div class="heart-cont">
+            {% if d.liked == "0" %}
+            <svg viewBox="0 0 24 24" class="heart">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+            {% elif d.liked == "1" %}
+            <svg viewBox="0 0 24 24" class="heart">
+                <path stroke-linecap="round" style="fill:red" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+            {% endif %}
+            <label class="likes" id="like">{{d.likesCount}}</label>
+            <label class="likes">&nbsp;likes</label>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+
+<script>
+    let e;
+    function del(evt)
+    {
+        e=evt;
+        //console.log(evt)
+        evt.parentElement.parentElement.remove();
+        id = evt.id.substring(4);
+        var jqxhr = $.ajax({
+            type: "POST",
+            url: "./delete",
+            dataType: document.contentType,
+            async: true,
+            data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                id : id
+            },
+        });
+    }
+</script>
+
+<script></script>
+{% if visible == "false" %}
+<style>
+    .heart {
+        stroke: red;
+        width: 20%;
+    }
+
+    .likes {
+        margin-top: 7%;
+    }
+
+    .like {
+        position: relative;
+        left: 40%;
+    }
+
+    .heart-cont {
+        width: 80%;
+        margin-left: 3%;
+        margin-top: 5px;
+        display: inline-flex;
+    }
+
+    .beforeopts:hover .heart-cont {
+        animation: moveupheart forwards;
+    }
+
+    .opts:hover .heart-cont {
+        animation: moveupheart forwards;
+    }
+
+    @keyframes moveupheart {
+        100% {
+            margin-top: -1%;
+        }
+    }
+
+    .icon {
+        width: 17%;
+        height: 50%;
+    }
+
+    #creation-bar {
+        width: 30%;
+        left: 45%;
+    }
+
+    #icon-add {
+        width: 0;
+        margin-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #icon-global {
+        margin-left: 5%;
+    }
+</style>
+<script>
+    heartInitial();
+</script>
+{% endif %}

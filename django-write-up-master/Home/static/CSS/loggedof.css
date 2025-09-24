@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Combo&family=Lora:wght@500&family=Pacifico&family=Poppins:wght@200&family=Signika+Negative:wght@500&display=swap');
+
+body {
+    color: white;
+}
+
+#headL {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: darkslateblue;
+    overflow: hidden;
+}
+
+#title{
+    position: relative;
+    top: 20%;
+    left: 32%;
+    width: max-content;
+    font-size: 800%;
+    font-family: 'Combo', cursive;
+    font-weight: bold;
+    color: white;
+    text-shadow: 9px 2px rgba(128, 128, 128, 0.532);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.note {
+    position: relative;
+    top: 4%;
+    left: 3%;
+    border: 2px solid yellow;
+    background-color: yellow;
+    width: 15%;
+    height: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    border: 2px solid rgba(203, 203, 4, 0.774);
+    border-radius: 10px 10px 10px 10px;
+    border-bottom-left-radius: 31%;
+    box-shadow: 5px 5px 5px 5px rgba(46, 46, 19, 0.774);
+}
+
+.note::after {
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.365);
+    position: relative;
+    height: 23%;
+    width: 21%;
+    top: 80%;
+    left: -1%;
+    border-bottom-left-radius: 100%;
+    /*border-bottom-right-radius: 50%;*/
+}
+
+.note.n2 {
+    left: 80%;
+    top: -40%;
+    background-color: pink;
+    border: 2px solid pink;
+    box-shadow: 5px 5px 5px 5px rgba(112, 98, 100, 0.553);
+}
+
+.note.n3 {
+    left: 50%;
+    top: -20%;
+    background-color: chocolate;
+    border: 2px solid chocolate;
+    box-shadow: 4px 4px 4px 4px rgba(163, 91, 39, 0.521);
+}
+
+#mid {
+    position: absolute;
+    top: 100%;
+    height: 62%;
+    width: 100%;
+}
+
+#photo {
+    position: relative;
+    top: 30%;
+    left: 25%;
+    border: 1px groove;
+    height: 43.5%;
+    width: 55%;
+    background-color: rgba(38, 80, 152, 0.059);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 2;
+    overflow: hidden;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#phWrite {
+    position: relative;
+    top: 0%;
+    width: 40%;
+    border-radius: 10px 10px 10px 10px;
+    height: 7%;
+    left: 30%;
+    background-color: rgba(169, 169, 169, 0.58);
+}
+
+#phWrite span {
+    position: relative;
+    left: 3%;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+#phnav {
+    position: relative;
+    top: 1%;
+    left: 0.5%;
+}
+
+#phnavp {
+    width: 3%;
+    display: inline;
+    filter: invert(100%);
+    /*border: red solid 2px;*/
+}
+
+#ptitle {
+    font-family: 'Combo', cursive;
+    display: inline;
+    position: relative;
+    left: 45%;
+    top: -8%;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.ptxtB {
+    display: inline-block;
+    padding-right: 5px;
+    border: cornflowerblue groove 2px;
+    width: 20%;
+    height: 53%;
+    position: relative;
+    left: 3%;
+    top: 5%;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.ppostB {
+    border-top: 2px cornflowerblue groove;
+    position: sticky;
+    height: 30%;
+    width: 110%;
+    margin-left: -5%;
+}
+
+.pheartD {
+    position: relative;
+    width: 20%;
+    top: 10%;
+    left: 2%;
+}
+
+.pheart {
+    fill: red;
+}
+
+.plikeC {
+    /*border: 2px solid red;*/
+    display: inline-block;
+    position: relative;
+    left: 20%;
+    top: -70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pUname {
+    position: relative;
+    font-size: 100%;
+    top: -84%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pUname.u1 {
+    left: 45%;
+    font-size: xx-small;
+}
+
+.pUname.u2 {
+    left: 44%;
+    font-size: x-small;
+}
+
+.pUname.u3 {
+    left: 60%;
+    font-size: x-small;
+}
+
+.pUname.u4 {
+    left: 45%;
+    font-size: x-small;
+}
+
+.ptextWT {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 70%;
+    top: -10%;
+    font-size: 100%;
+}
+
+.ptextWT p {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+}
+
+.dood.dB1 {
+    position: absolute;
+    top: 20%;
+    width: 30%;
+    height: 80%;
+}
+
+.dood span {
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bolder;
+    display: block;
+    width: max-content;
+}
+
+.doodle.d1,
+.doodle.d2 {
+    font-size: 300%;
+    left: 30%;
+    top: 10%;
+    font-weight: bold;
+    color: white;
+    border: 10px solid rgb(169,155,255, 74%);
+    padding: 2% 10% 2% 10%;
+    transform: rotate(20deg);
+    text-shadow: 5px 5px rgba(27, 25, 22, 0.429);
+    box-shadow: 2px 2px 2px 2px rgba(20, 19, 30, 0.196),
+        4px 4px 4px 4px rgba(31, 28, 48, 0.196),
+        6px 6px 6px 6px rgba(35, 33, 48, 0.416);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.doodle.d2 {
+    transform: rotate(-20deg);
+}
+
+#flower {
+    position: inherit;
+    width: 60%;
+    height: 70%;
+    margin: 0;
+    top: -20%;
+    margin: 0;
+    z-index: 0;
+}
+
+.dood.dB2 {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 30%;
+    height: 80%;
+    overflow: hidden;
+}
+
+#img1 {
+    width: 60%;
+    margin: 0;
+    position: relative;
+    top: 20%;
+    left: 45%;
+}
+
+#introTxt{
+    position: relative;
+    top: 20%;
+    left: 2%;
+}
+
+.iT{
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.iT span{
+    display: inline-block;
+    width: max-content;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes spacing {
+    0%{
+        letter-spacing: 40px;
+    }
+    100%{
+        letter-spacing: 0;
+    }
+}
+
+@keyframes shrinkFadeIn1 {
+    0%{
+        opacity: 0;
+        transform: scale(2)rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1)rotate(-20deg);
+    }
+}
+
+@keyframes shrinkFadeIn2 {
+    0%{
+        opacity: 0;
+        transform: scale(2)rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1)rotate(20deg);
+    }
+}
+#title{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+.doodle.d1,.doodle.d2{
+    opacity: 0;
+    animation: shrinkFadeIn1 2s forwards;
+    animation-delay: 2s;
+}
+
+.doodle.d2{
+    animation: shrinkFadeIn2 2s forwards;
+    animation-delay: 2s;
+}
+
+#title p{
+    margin: 0;
+    animation: spacing 1s forwards;
+}
+
+.iT span{
+    opacity: 0;
+}
+
+.iT.t1{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: 5s;
+}
+
+.iT.t2{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: 8s;
+}
+
+.iT.t3{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: 12s;
+}
+
+#img1{
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: 12s;
+}
+
+@keyframes roll {
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+        height: 53%;
+    }
+}
+.ptxtB{
+    animation: roll 5s forwards;
+    /*animation: spacing 1s forwards;
+    animation-delay: 8s;*/
+}
+
+.ppostB{
+    opacity: 0;
+    animation: fadeIn 6s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes heartGrow {
+    0%{
+        scale: 2;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+.pheartD{
+    opacity: 0;
+    animation: heartGrow 5s forwards;
+    animation-delay: 6s;
+}
+
+.plikeC,.pUname{
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    animation-delay: 8s;
+}
+@keyframes expandSearch {
+    0%{
+        width: 1%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+#phWrite{
+    animation: expandSearch 5s forwards;
+}
+
+@keyframes openPhoto {
+    0%{
+        top: 71%;
+        height: 0%;
+    }
+    100%{
+        top: 30%;
+        height: 43.5%;
+    }
+}
+
+#photo{
+    animation: openPhoto 2s forwards;
+}
+
+@keyframes expandtitle {
+    0%{
+        font-size: 0%;
+    }
+    100%{
+        font-size: 100%;
+    }
+}
+#ptitle{
+    font-size: 0%;
+    animation: expandtitle 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.iT{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@keyframes scaleUp {
+    from{
+        scale: 1.2;
+    }
+    to{
+        scale: 1;
+    }   
+}
+.pheart:hover{
+    animation: scaleUp 1s infinite;
+}

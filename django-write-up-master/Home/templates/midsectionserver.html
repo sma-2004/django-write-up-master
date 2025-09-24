@@ -1,0 +1,168 @@
+{% load static %}
+<style>
+    #mid {
+        height: 100%;
+        overflow: auto;
+    }
+    .content-holder {
+        position: relative;
+        display: inline-block;
+        color: rgb(143, 143, 143);
+        width: 23%;
+        height: 92%;
+        border: 5px double rgb(61, 56, 56);
+        margin-top: 5%;
+        margin-left: 0.5%;
+        margin-bottom: 0;
+        overflow: hidden;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .content-holder p {
+        margin-top: 2%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .opts {
+        height: 5%;
+        border: 0px rgb(45, 38, 38) solid;
+        background-color: rgb(25, 22, 22);
+        position: absolute;
+        top: 95%;
+        width: 100%;
+    }
+    .content-Handler {
+        position: absolute;
+        height: 90%;
+        width: 100%;
+    }
+
+    .beforeopts {
+        position: relative;
+        left: 34%;
+        width: 3%;
+        height: 20%;
+        padding-left: 30%;
+        top: 50%;
+        background-color: white;
+        border-radius: 5px 5px 5px 5px;
+        z-index: 2;
+    }
+
+    .opts:hover {
+        cursor: pointer;
+        animation: expand_opts 200ms forwards linear;
+    }
+
+    .opts:hover .beforeopts {
+        cursor: pointer;
+        animation: fadeout 100ms forwards linear;
+    }
+
+    .beforeopts:hover {
+        cursor: pointer;
+        animation: fadeout 100ms forwards linear;
+    }
+
+    @keyframes expand_opts {
+        100% {
+            top: 76%;
+            height: 25%;
+        }
+    }
+
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .heart {
+        stroke: red;
+        width: 20%;
+    }
+    .likes{
+        margin-top: 7%;
+    }
+    .like{
+        position: relative;
+        left: 40%;
+    }
+    .heart-cont {
+        width: 80%;
+        margin-left: 3%;
+        margin-top: 14px;
+        display: inline-flex;
+    }
+    .beforeopts:hover .heart-cont {
+        animation: moveupheart forwards;
+    }
+
+    .opts:hover .heart-cont {
+        animation: moveupheart forwards;
+    }
+
+    @keyframes moveupheart {
+        100% {
+            margin-top: -1%;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f16f;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar:hover {
+        width: 15px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover ::-webkit-scrollbar {
+        width: 15px;
+    }
+</style>
+<div class="content-Handler" id="conH">
+{% for d in data %}
+<div id="contH" class="content-holder">
+    <p class="posttxt" id="posttxt ${{d.id}}">
+        {{d.text}}
+    </p>
+    <div class="opts">
+        <div class="beforeopts"></div>
+        <div class="heart-cont">
+            <svg viewBox="0 0 24 24" class="heart">
+                <path stroke-linecap="round" style="fill:red" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+            <label class="likes" id="like">{{d.likesCount}}</label>
+            <label class="likes">&nbsp;likes</label>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>

@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Headland+One&family=Josefin+Sans:wght@100;300&family=Qwitcher+Grypen&family=Ubuntu:wght@300&display=swap');
+
+body {
+    margin: 0;
+}
+
+#home {
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    color: white;
+}
+
+#home:hover {
+    cursor: pointer;
+}
+
+#Home:hover {
+    cursor: pointer;
+}
+
+#formContainer {
+    /*border: 2px solid green;*/
+    position: absolute;
+    right: 4%;
+    top: 3%;
+    padding: 15px 30px 15px 15px;
+    width: 30%;
+    padding-top: 5px;
+    background-image: linear-gradient(270deg, #1a1c37, #1f266b, #15183a, #0f111e);
+    /*background-image: url("{% static 'SignUpImg.jpg'%}");*/
+    border-radius: 20px 20px 20px 20px;
+}
+
+.form,
+#id_OTP {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 8px 8px 8px 8px;
+    padding: 5px 5px 5px 5px;
+    /*background-image: radial-gradient(#2e3cbd, #161d5a);*/
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#back {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(32, 33, 51);
+}
+
+input:hover {
+    border: none;
+    border-bottom: 2px solid #1d4448;
+    background-color: rgb(192, 192, 192);
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+    cursor: text;
+}
+
+label {
+    display: block;
+    padding-bottom: 1%;
+    font-size: 100%;
+    color: white;
+    font-family: 'Headland One', serif;
+}
+
+#signUp {
+    width: auto;
+    position: relative;
+    left: 45%;
+}
+
+#id_OTP {
+    display: block;
+}
+
+#imgD {
+    border: none;
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    width: 49%;
+    height: 65%;
+    z-index: -1;
+}
+
+#signup {
+    width: 100%;
+    height: 100%;
+}
+
+.cloud {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 14%;
+    height: 7%;
+    background: #ECEFF1;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    z-index: 3;
+    font-family: 'Dancing Script', cursive;
+    opacity: 0;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cloud::after,
+.cloud::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.cloud::after {
+    width: 40%;
+    height: 140%;
+    bottom: 30%;
+    left: 15%;
+    border-radius: 100%;
+    border-bottom-left-radius: 0;
+}
+
+.cloud::before {
+    width: 50%;
+    height: 230%;
+    top: -130%;
+    left: 40%;
+}
+
+
+.cloud.c1 {
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    animation: fadeIn 2s forwards;
+    animation-delay: 2.5s;
+}
+
+.cloud.c2 {
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    animation: fadeIn 2s forwards;
+    animation-delay: 3s;
+}
+
+.cloud.c3 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    animation: fadeIn 2s forwards;
+    animation-delay: 4s;
+}
+
+.cloud.c4 {
+    position: absolute;
+    top: 83%;
+    left: 20%;
+    animation: fadeIn 2s forwards;
+    animation-delay: 3.5s;
+}
+
+.Text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    bottom: 50%;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.Text.t2 {
+    font-size: 1rem;
+    bottom: 90%;
+}
+
+.Text.t3 {
+    font-size: 1rem;
+    bottom: 50%;
+}
+
+.Text.t4 {
+    font-size: 1.16rem;
+    bottom: 53%;
+}
+
+#signUp {
+    border: none;
+    background-color: rgb(0, 0, 199);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 17px 17px 17px 17px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-weight: bold;
+    position: relative;
+    left: 40%;
+}
+
+#signUp:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 230);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#path {
+    border: 5px solid white;
+    height: 65%;
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    border-radius: 50%;
+}
+
+#writeD {
+    /*border: 2px solid white;*/
+    border: none;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    top: -18%;
+    text-align: center;
+    left: 3%;
+    transform: rotate(-45deg);
+    font-size: 500%;
+    font-weight: bold;
+    font-family: 'Qwitcher Grypen', cursive;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#coverD {
+    border-left: 2px solid rgb(65, 68, 154);
+    /*border: none;*/
+    position: relative;
+    width: 60%;
+    height: 30%;
+    top: 25%;
+    text-align: center;
+    left: 3%;
+    transform: rotate(-45deg);
+    background-color: rgb(32, 33, 51);
+    z-index: 2;
+    animation: type ease-in-out 2s forwards;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@keyframes type {
+    0% {
+        top: 25%;
+        left: 3%;
+    }
+
+    50% {
+        border-left: 2px solid rgb(55, 57, 108);
+    }
+
+    100% {
+        top: -58%;
+        left: 38%;
+        border-left: 2px solid rgb(32, 33, 51);
+    }
+}
+
+#write {
+    color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#signIn {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    color: white;
+    font-size: large;
+    display: block;
+    text-decoration: none;
+    border: 3px solid rgb(255, 0, 0);
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: red;
+    margin-left: 5px;
+}
+
+#signIn:hover {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.16);
+    box-shadow: 0px 4px 8px 0 rgba(237, 0, 0, 0.715);
+    cursor: pointer;
+}
+
+#Home,
+#SignIn {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#SignIn {
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+}
+
+#SignIn:hover{
+    cursor: pointer;
+}
+
+#err,#Msg{
+    text-align: center;
+    padding-top: 1%;
+    color: red;
+}
+
+#Msg{
+    color: rgb(26, 159, 26);
+}

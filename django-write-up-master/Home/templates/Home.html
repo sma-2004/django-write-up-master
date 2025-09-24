@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'CSS/Home.css' %}">
+<div id="topmost"></div>
+<div id="head" class="header">
+    <!-- <img id="headB" src="{%static 'background.webp' %}" alt="Unable to Load"> -->
+    <a href="./" id="home" class="link">Home</a>
+    <div id="stateImgD">
+        <img id="stateImg" class="link" src="{% static 'loginImg.jpg' %}" alt="Unable to load">
+    </div>
+    <a href="{{log}}" id="state">{{state}}</a>
+
+    <a href="/signUp" id="signUpL" class="link">Sign Up</a>
+
+</div><br>
+{%block log %}
+{% endblock %}
+<div id="footer">
+    {% include 'footer.html'%}
+</div>
+{% endblock %}

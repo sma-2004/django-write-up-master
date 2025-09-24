@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Dancing+Script&family=EB+Garamond&family=Headland+One&family=Josefin+Sans:wght@100;300&family=Kanit:wght@100;400&family=Lobster&family=Qwitcher+Grypen:wght@400;700&family=Ubuntu:wght@300&display=swap');
+
+body {
+    margin: 0;
+    color: white;
+    background-color: rgb(29, 25, 25);
+}
+
+#back {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#formContainer {
+    border: 5px groove rgb(49, 41, 41);
+    position: absolute;
+    top: 23%;
+    left: 28%;
+    width: 47%;
+    height: 62%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#loginLabel {
+    position: relative;
+    left: 41%;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-top: 3%;
+    font-size: x-large;
+    font-family: 'Cairo', sans-serif;
+    padding-bottom: 1%;
+}
+
+#loginLabel {
+    position: relative;
+    top: 3%;
+    left: 40%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    background: -webkit-linear-gradient(270deg, rgb(209, 0, 195), rgb(1, 210, 182));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form {
+    width: 100%;
+    position: relative;
+    top: 5%;
+}
+
+#login {
+    position: relative;
+    top: 3%;
+    left: 42%;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+
+#titleH {
+    z-index: 2;
+    color: white;
+    position: absolute;
+    top: 1%;
+    left: 42%;
+}
+
+#title,
+#staticText {
+    text-decoration: none;
+    color: white;
+    font-size: 200%;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-weight: bold;
+}
+
+#dynamicTxt {
+    list-style: none;
+}
+
+.TxtContainer {
+    display: inline-flex;
+    /*border: 2px solid blue;
+    position: absolute;
+    height: 100%;
+    width: 335%;
+    /*overflow: hidden;
+    top: 1%;
+    left: 80%;*/
+
+}
+
+.TxtContainer .staticTxt {
+    font-size: 200%;
+}
+
+.TxtContainer .dynamicTxt {
+    margin-left: -25px;
+    line-height: 90px;
+    margin-top: 20px;
+    height: 60px;
+    overflow: hidden;
+    /*position: absolute;
+    border: 2px solid brown;
+    animation: slide 50s linear forwards;*/
+}
+
+.dynamicTxt .txt {
+    list-style: none;
+    font-size: 200%;
+    position: relative;
+    top: -29%;
+    animation: slide 30s linear infinite;
+}
+
+/*.dynamicTxt li span{
+    position: relative;
+}
+
+.dynamicTxt li span::after{
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(29, 25, 25);
+    border-left: 2px solid white;
+    animation: typing 1.5s linear infinite;
+}*/
+
+@keyframes slide {
+
+    5%,
+    6%,
+    7%,
+    8%,
+    9%,
+    10% {
+        top: -30%;
+    }
+
+    16%,
+    17%,
+    18%,
+    19%,
+    20% {
+        top: -110px;
+    }
+
+
+    26%,
+    27%,
+    28%,
+    29%,
+    30% {
+        top: -200px;
+    }
+
+    36%,
+    37%,
+    38%,
+    39%,
+    40% {
+        top: -290px;
+    }
+
+    46%,
+    47%,
+    48%,
+    49%,
+    50% {
+        top: -380px;
+    }
+
+    56%,
+    57%,
+    58%,
+    59%,
+    60% {
+        top: -470px;
+    }
+
+    66%,
+    67%,
+    68%,
+    69%,
+    70% {
+        top: -560px;
+    }
+
+    76%,
+    77%,
+    78%,
+    79%,
+    80% {
+        top: -649px;
+    }
+
+    86%,
+    87%,
+    88%,
+    89%,
+    90% {
+        top: -649px;
+    }
+
+    96%,
+    97%,
+    98%,
+    99%,
+    100% {
+        top: -739px;
+    }
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.staticTxt {
+    margin-top: -1px;
+    margin-left: -10px;
+}
+
+.textbox {
+    position: absolute;
+    height: 16%;
+    width: 17%;
+    top: 23%;
+    left: 2%;
+    /*background-color: rgb(185, 185, 0);*/
+    background-image: linear-gradient(90deg, #99c00c, #6b8609, #637d08);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+.textbox::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #637d08;
+    /*linear-gradient(90deg,#570a5f,#8b1855,#b71e6b);*/
+    border-bottom-right-radius: 100%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.559);
+    z-index: -1;
+}
+
+.textbox.t1::after {
+    width: 10%;
+    height: 29%;
+    right: 0.1%;
+    bottom: -11%;
+}
+
+.textbox.t2 {
+    width: 17%;
+    height: 15%;
+    left: 76%;
+    top: 24%;
+    background-image: linear-gradient(90deg, #1e23b7, #182b8b, #0a105f);
+}
+
+.textbox.t2::after {
+    width: 10%;
+    height: 32%;
+    right: 0;
+    bottom: -10%;
+    background: #0a105f;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 100%;
+}
+
+.textbox.t3 {
+    height: 17%;
+    width: 17%;
+    top: 50%;
+    left: 9%;
+    background-image: linear-gradient(90deg, #b71e1e, #8b1818, #5f0a0a);
+    box-shadow: -10px -10px rgba(0, 0, 0, 0.3);
+}
+
+.textbox.t3::after {
+    width: 10%;
+    height: 30%;
+    left: 0%;
+    top: -12%;
+    background: #b71e1e;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 100%;
+    box-shadow: -10px -10px rgba(0, 0, 0, 0.559);
+}
+
+.textbox.t4 {
+    width: 15%;
+    height: 15%;
+    top: 50%;
+    left: 82%;
+    background-image: linear-gradient(90deg, #751eb7, #59188b, #4d0a5f);
+    box-shadow: -10px -10px rgba(0, 0, 0, 0.3);
+}
+
+.textbox.t4::after {
+    width: 10%;
+    height: 32%;
+    left: 0%;
+    top: -10%;
+    background: #751eb7;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 100%;
+    box-shadow: -10px -10px rgba(0, 0, 0, 0.559);
+}
+
+.tx {
+    position: relative;
+    font-size: medium;
+    top: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Lobster', cursive;
+}
+
+#span1 {
+    position: relative;
+    display: block;
+    text-align: end;
+}
+
+#tx2 {
+    font-size: small;
+    padding-left: 5%;
+}
+
+#tx3 {
+    font-size: small;
+    text-align: center;
+}
+
+#tx4 {
+    font-size: 70%;
+    padding-left: 5%;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.textbox.t1 {
+    animation: fade 2s linear forwards;
+    animation-delay: 1s;
+}
+
+.textbox.t2 {
+    animation: fade 2s linear forwards;
+    animation-delay: 2s;
+}
+
+.textbox.t3 {
+    animation: fade 2s linear forwards;
+    animation-delay: 3s;
+}
+
+.textbox.t4 {
+    animation: fade 2s linear forwards;
+    animation-delay: 4s;
+}
+
+#signUP {
+    display: block;
+    position: relative;
+    top: 4%;
+    left: 43%;
+    width: max-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+#signUP:hover {
+    color: rgb(0, 0, 188);
+}
+
+#msg{
+    color: red;
+    display: inline;
+    width: max-content;
+    top: -5%;
+    left: 27%;
+    font-size: medium;
+}
+#title,.txt,.dynamicTxt{
+    width: max-content;
+}

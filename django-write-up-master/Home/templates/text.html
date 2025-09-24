@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="ts" method="post" onsubmit="postM()" id="form">
+        {% csrf_token %}
+        <div style="position : absolute;border: 2px solid red;height : 30%;width : 50%" contenteditable="true" id="text"
+            name="txt">
+        </div>
+        <input type="submit" value="Submit" style="position: absolute;top : 50%">
+    </form>
+</body>
+
+<script>
+    function postM() {
+        elm = document.getElementById("text")
+        frm = document.getElementById("form")
+        inputTag = document.createElement("input")
+        inputTag.setAttribute("name","txt")
+        inputTag.value = elm.innerHTML;
+        frm.appendChild(inputTag)
+        elm.remove()
+    }
+</script>
+
+</html>
